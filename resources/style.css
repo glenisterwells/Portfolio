@@ -2,7 +2,10 @@
 /* 2 Nav Bar Styles */
 /* 3 Header Styles */
 /* 4 About Me Styles */
-/* Skills styles */
+/* 5 Skills styles */
+/* 6 Projects Styles */
+/* 7 Contact Styles */
+/* 8 Footer Styles */
 
 /* 1 */
 *{
@@ -13,9 +16,10 @@
 
 body{
     font-family: 'Sawarabi Gothic', sans-serif;
-    background-color: rgb(213, 226, 217);
+    /* background-color: rgb(213, 226, 217); */
     color: rgba(36, 33, 33, 0.9);
     letter-spacing: .15rem;
+    background: linear-gradient(0.25turn, rgb(213, 226, 217), #ebf8e1, rgb(165, 194, 163));
 }
 
 h2{
@@ -30,7 +34,9 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 4rem;
-    background-color: rgb(213, 226, 217);
+    /* background-color: rgb(213, 226, 217); */
+    background: linear-gradient(0.25turn, rgb(213, 226, 217), #ebf8e1, rgb(165, 194, 163));
+
 }
 
 nav a:visited{
@@ -100,8 +106,8 @@ nav a:hover{
         position: absolute;
         top: 8vh;
         right: 0px;
-        height: 92vh;
-        background-color: rgb(213, 226, 217);
+        height: 65vh;
+        background: linear-gradient(0.25turn, rgb(213, 226, 217), #ebf8e1, rgb(165, 194, 163));
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -152,6 +158,12 @@ nav a:hover{
     box-shadow: 0 0 10px rgba(41, 53, 36, 0.9);
 }
 
+/* .header:hover{
+    background: linear-gradient(0.25turn, rgb(54, 68, 58), #4d5149, rgb(34, 39, 33));;
+    color: whitesmoke;
+    
+} */
+
 
 
 .header h1, h2{
@@ -182,9 +194,9 @@ span .fade{
 }
 
 @media screen and (max-width: 800px) {
-    .header h1, h2, h3, h4, span{
-        font-size: 85%;
-    }
+    /* .header h1, h2, h3, h4, span{
+        font-size: 90%;
+    } */
     
 }
 
@@ -240,9 +252,12 @@ img.selfie{
     }
     .about-container{
         width: 75%;
+        margin-bottom: 2rem;
     }
     .selfie-container{
         width: 75%;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -260,7 +275,7 @@ img.selfie{
 
 .skill-section{
     display: flex;
-    background-color: pink;
+    background: none;
     justify-content: space-around;
     margin: 1rem;
     padding: 3rem;
@@ -270,10 +285,199 @@ img.selfie{
 .skills{
     width: 5rem;
     height: 5rem;
-    background-color: lightblue;
+    background: none;
+   
+   
     
     
 }
 .skills svg{
     max-width: 5rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .skill-section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .skills svg{
+        min-width: 4rem;
+        margin: 1rem;
+        
+    }
+}
+
+/* 6 */
+
+
+
+
+
+/* 7 */
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container{
+    max-width: 700px;
+    height: 60vh;
+    width: 100%;
+    background-color: aliceblue;
+    padding: 1rem 3rem;
+    border: 8px solid aliceblue;
+    border-radius: 24px;
+    box-shadow: 0 0 10px rgba(41, 53, 36, 0.9);
+
+}
+
+.contact-container .contact-me{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contact-me p{
+    font-size: 1rem;
+    font-weight: 500px;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.contact-container form .user-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-detail .input-box{
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0px 12px 0px;
+}
+
+.user-detail .input-box .details{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+
+}
+
+.user-detail .input-box input{
+    height: 3rem;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(41, 53, 36, 0.9);
+    padding-left: .5rem;
+    border-bottom-width: 3px;
+    transition: all 300ms ease;
+}
+
+.user-detail .input-box input:focus,
+.user-detail .input-box input:valid{
+    border-color:  rgba(41, 53, 36, 0.9);
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+}
+
+.user-detail .textarea {
+    width: 100%;
+    height: 6rem;
+}
+
+.user-detail .textarea .message{
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.textarea textarea{
+    width: 100%;
+    min-height: 6rem;
+    border-color:  rgba(41, 53, 36, 0.9);
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    outline: none;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+form .submit{
+    width: 100%;
+    height: 2rem;
+    margin-top: 4rem;
+}
+
+input[type="submit" i] {
+    width: 100%;
+    background-color: pink;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: linear-gradient(0.25turn, rgb(213, 226, 217), #ebf8e1, rgb(165, 194, 163));
+}
+
+input[type="submit" i]:hover {
+    background: linear-gradient(-0.25turn, rgb(213, 226, 217), #ebf8e1, rgb(165, 194, 163));
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 584px){
+    .contact-container{
+        max-width: 90%; 
+        border: 8px solid aliceblue;
+        border-radius: 24px;
+        box-shadow: 0 0 10px rgba(41, 53, 36, 0.9);
+    }
+    form .user-detail .input-box{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .contact-container form .user-detail{
+       max-height: 400px;
+       overflow-y: scroll;
+    }
+}
+
+/* 8 */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+footer h4, h5{
+    padding-top: 1rem;
+
+}
+
+footer h5{
+    padding-bottom: 3rem;
+}
+
+@media only screen and (max-width: 430px){
+    footer h4, h5{
+        font-size: 80%;
+    }
 }
