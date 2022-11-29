@@ -8,6 +8,7 @@
 /* 8 Footer Styles */
 
 /* 1 */
+
 *{
     margin: 0;
     padding: 0;
@@ -29,6 +30,7 @@ h2{
 
 
 /* 2 */
+
 #logo{
     opacity: 0;
 }
@@ -314,8 +316,26 @@ img.selfie{
 
 /* 6 */
 
+.projects-section h3{
+    text-align: center;
+    padding-bottom: 2rem;
+}
 
+.projects-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+.project{
+    background-color: aliceblue;
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 3rem;
+    
+}
 
 
 /* 7 */
@@ -430,19 +450,6 @@ input[type="submit" i]:hover {
     background: linear-gradient(-0.25turn, rgb(213, 226, 217), #ebf8e1, rgb(165, 194, 163));
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 584px){
     .contact-container{
